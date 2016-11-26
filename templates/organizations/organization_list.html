@@ -12,6 +12,9 @@
     </div>
 
     {# filters #}
+    <div class="row categories">
+        <span class="category" data-category="all">All the Things</span>
+    </div>
     {% for category in categories %}
         {% if forloop.counter0|divisibleby:4 %}
             <div class="row categories">
@@ -67,7 +70,14 @@
             $('.organization-outer').hide();
 
             $('.category').on('click', function() {
-                $(this).toggleClass('active');
+                if ($(this).data('category') == 'all') {
+                    $('.category').removeClass('active');
+                    $(this).addClass('active');
+                } else {
+                    $('span[data-category="all"]').removeClass('active');
+                    $(this).toggleClass('active');
+                }
+
                 $('.organization-outer').hide();
 
                 $('.category').each(function() {
@@ -75,12 +85,14 @@
                         category = $category_item.data('category');
     
                     $('.organization-outer').each(function() {
-                        if ($(this).data('categories').indexOf(category) > -1 && $category_item.hasClass('active')) {
+                        if ($('span[data-category="all"]').hasClass('active') || ($(this).data('categories').indexOf(category) > -1 && $category_item.hasClass('active'))) {
                             $(this).show();
                         }
                     });
                 });
             });
+
+            $('span[data-category="all"]').click();
         });
     </script>
 {% endblock extra_js %}
