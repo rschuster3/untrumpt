@@ -1,0 +1,86 @@
+{% extends 'website_base.html' %}
+
+{% block head_title %}Organization List{% endblock head_title %}
+
+{% block main_content %}
+    <div class="row title">
+        <div class="col-md-12">
+            <h1>What's Important To You?</h1>
+            <p>Filter organzations by clicking on the issues you care about most</p>
+            <hr>
+        </div>
+    </div>
+
+    {# filters #}
+    {% for category in categories %}
+        {% if forloop.counter0|divisibleby:4 %}
+            <div class="row categories">
+        {% endif %}
+            <span class="category" data-category="{{ category.0 }}">{{ category.1 }}</span>
+        {% if forloop.counter0|add:-3|divisibleby:4 %}
+            </div>
+        {% endif %}
+    {% endfor %}
+
+    <br />
+    <br />
+
+    <div class="row row-eq-height organization-row"> 
+        {% for organization in organizations %}
+            <div class="col-md-4 organization-outer" data-categories="{{ organization.categories }}">
+                <div class="organization-inner">
+                    <h3>
+                        <a href="{{ organization.website }}" target="_blank">{{ organization.name }}</a>
+                    </h3>
+                    {% if organization.description %}
+                        <p>{{ organization.description|truncatechars:250 }}</p>
+                    {% endif %}
+        
+                    {% if organization.donate_url %}
+                        <a href="{{ organization.donate_url }}">Donate</a>
+                    {% endif %}
+        
+                    {% if organization.involvement_url %}
+                        | <a href="{{ organization.involvement_url }}">Get Involved</a>
+                    {% endif %}
+        
+                    {% if organization.facebook_url %}
+                        | <a href="{{ organization.facebook_url }}">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    {% endif %}
+        
+                    {% if organization.twitter_handle %}
+                        | <a href="{{ organization.twitter_handle }}">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock main_content %}
+
+{% block extra_js %}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.organization-outer').hide();
+
+            $('.category').on('click', function() {
+                $(this).toggleClass('active');
+                $('.organization-outer').hide();
+
+                $('.category').each(function() {
+                    var $category_item = $(this),
+                        category = $category_item.data('category');
+    
+                    $('.organization-outer').each(function() {
+                        if ($(this).data('categories').indexOf(category) > -1 && $category_item.hasClass('active')) {
+                            $(this).show();
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+{% endblock extra_js %}

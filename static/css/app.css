@@ -1,0 +1,86 @@
+body {
+    background-color: #e6e6e6;
+}
+
+.navbar {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid #cccccc;
+    font-family: "Open Sans", sans-serif;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4 {
+    font-family: "Catamaran", sans-serif;
+    color: #00a79d;
+}
+.main-content a {
+    color: #00a79d;
+}
+.main-content p {
+    font-family: "Open Sans", sans-serif;
+}
+
+.title h1 {
+    color: #333333 !important;
+    text-align: center;
+}
+.title p {
+    color: #333333 !important;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 150%;
+}
+.title hr {
+    width: 100px;
+    border: 1px solid #333333;
+}
+
+.organization-row {
+    height: 300px;
+}
+.organization-outer {
+    float: left;
+    text-align: center;
+    height: 100%;
+}
+.organization-inner {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    height: 90%;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 2px #cccccc;
+}
+
+.categories {
+    text-align: center;
+    margin-top:10px;
+}
+.category {
+    background-color: #cccccc;
+    font-family: "Open Sans", sans-serif;
+    border-radius: 2px;
+    margin-right: 10px;
+    font-size: 130%;
+    padding: 3px;
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                          not supported by any browser */
+}
+.category:hover {
+    font-weight: bold; 
+}
+
+.active {
+    background-color: #333333 !important;
+    color: #ffffff !important;
+}
