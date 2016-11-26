@@ -1,12 +1,24 @@
 {% extends "website_base.html" %}
 
+{% load static %}
+
 {% block head_title %}Home{% endblock head_title %}
 
-{% block main_content %}
-    <div class="row title">
-        <div class="col-md-12">
-            <h1>Want to Fight Back Against a Trump Presidency?</h1>
-            <p><a href="{% url 'organization_list' %}">Help these organizations</a></p>
+{% block jumbotron %}
+    <div class="row front-page-panel" style="background-image:url('{% static 'img/front_page.jpg' %}');">
+        <div class="col-md-10 col-md-offset-1">
+            <h1><span class="highlight">You Can Fight Back Against a Trump Presidency</span></h1>
+            <div class="buttons">
+                <button type="button" class="btn btn-secondary">
+                    <a href="{% url 'organization_list' %}">Help These Organizations</a>
+                </button>
+                <button type="button" class="btn btn-secondary">
+                    <a href="#">See What They're Up To</a>
+                </button>
+            </div>
         </div>
     </div>
+{% endblock jumbotron %}
+
+{% block main_content %}
 {% endblock main_content %}
