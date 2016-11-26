@@ -8,6 +8,7 @@ Make sure you have VirtualBox and Vagrant on your computer. Don't `vagrant up` y
 
 Copy `app.env.example` over to `app.env` and:
 - Update the database username and password if you want to (database name, host, and port should be fine for now)
+- Generage a Django `SECRET_KEY` [here](http://www.miniwebtool.com/django-secret-key-generator/) and paste it in.
 
 Now you can `vagrant_up`.
 
