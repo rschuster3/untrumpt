@@ -1,6 +1,8 @@
 /* General */
 body {
     background-color: #e6e6e6;
+    overflow-x: hidden;
+    background-size: cover;
 }
 
 .navbar {
@@ -41,33 +43,28 @@ body {
 }
 
 .front-page-panel {
-    background-size: cover;
     font-family: "Catamaran", sans-serif;
     color: #333333;
     height: 100vh;
+    padding-top: 25vh;
     margin-top: -50px;
-    padding-top: 100px;
 }
 
 .front-page-panel h1 {
     font-size: 500%;
-    width: 50%;
-    float:left;
+    margin-top: -10px; 
+    margin-bottom: 50px;
 }
 .highlight {
     background-color: rgba(255,255,255,0.85);
-    line-height: 1.4;
 }
 
-.buttons {
-    float:right;
-    width: 50%;
-}
 .front-page-panel button {
-    border-radius: 0;
+    border-radius: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
     background-color: #00a79d;
-    float:right;
 }
 .front-page-panel a {
     color: #ffffff;
