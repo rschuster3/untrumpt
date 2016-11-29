@@ -110,17 +110,14 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 # SECURITY WARNING: don't run with debug turned on in production!
 ALLOWED_HOSTS = ['*']
 
-# FOR DEV:
-# Set up empty database config which is overridden in local_settings.py
-# Create an app.env to control these settings for local development 
 DATABASES = {
     'default': {
-        'ENGINE': '',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT'),
     }
 }
 
@@ -133,11 +130,5 @@ DATABASES['default'].update(db_from_env)
 # https is cool
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-# This can be overridden in local_settings.py by changing app.env 
-DEBUG=False
-
-# Import this last!
-try:
-    import local_settings 
-except ImportError:
-    pass
+# This can be overridden in app.env 
+DEBUG=os.environ.get('DEBUG')
