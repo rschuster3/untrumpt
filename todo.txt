@@ -1,14 +1,6 @@
 - Can always hunt down and add more organizations!
 
 - Map out site
-    - about page
-    - can add twitter feed and press releases later
-
-- Create prod version of settings file
-    - debug False (see link below)
-
-- Get a Heroku hobby account and push to that
-
-- Hook up domain name with Heroku app
-
-https://djangogirls.gitbooks.io/django-girls-tutorial-extensions/content/heroku/
+    - about/contact page
+    - twitter feed
+    - RSS feed 

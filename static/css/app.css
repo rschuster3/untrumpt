@@ -62,12 +62,9 @@ body {
 
 .front-page-panel button {
     border-radius: 0;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
     background-color: #00a79d;
 }
-.front-page-panel a {
+.front-page-panel button span {
     color: #ffffff;
     text-decoration: none;
     font-size: 7vh;
