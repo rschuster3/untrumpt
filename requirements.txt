@@ -1,6 +1,5 @@
 Cheetah==2.4.4
 Django==1.10.3
-Landscape-Client==14.12
 Markdown==2.6.7
 PAM==0.4.2
 PyYAML==3.10
