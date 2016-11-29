@@ -4,7 +4,6 @@ Markdown==2.6.7
 PAM==0.1.4
 PyYAML==3.10
 SecretStorage==2.0.0
-apt-xapian-index==0.45
 argparse==1.2.1
 chardet==2.0.1
 cloud-init==0.7.5
