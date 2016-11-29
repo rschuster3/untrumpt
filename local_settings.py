@@ -1,8 +1,6 @@
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
-DEBUG = True
+DEBUG = os.environ.get('DEBUG') 
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases

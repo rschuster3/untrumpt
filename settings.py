@@ -21,22 +21,6 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY') 
 
-# SECURITY WARNING: don't run with debug turned on in production!
-ALLOWED_HOSTS = ['*']
-
-# Database
-# https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': os.environ.get('DB_HOST'),
-        'PORT': os.environ.get('DB_PORT'),
-    }
-}
-
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -123,13 +107,33 @@ STATICFILES_DIRS = (
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-# Because this tutorial said so: https://djangogirls.gitbooks.io/django-girls-tutorial-extensions/content/heroku/
+# SECURITY WARNING: don't run with debug turned on in production!
+ALLOWED_HOSTS = ['*']
+
+# FOR DEV:
+# Set up empty database config which is overridden in local_settings.py
+# Create an app.env to control these settings for local development 
+DATABASES = {
+    'default': {
+        'ENGINE': '',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+    }
+}
+
+# FOR PROD:
+# Update database with Heroku Config
 import dj_database_url
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
 
+# https is cool
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
+# This can be overridden in local_settings.py by changing app.env 
 DEBUG=False
 
 # Import this last!
