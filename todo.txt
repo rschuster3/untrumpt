@@ -1,21 +1,14 @@
 - Can always hunt down and add more organizations!
 
-- Set up organizations page
-    - CSS styling: choose colors, layout, etc
-    - JS for filters
-
 - Map out site
     - about page
-    - organizations page
-    - home page with simple intro/message
     - can add twitter feed and press releases later
 
-- Get domain name untrumpt.com
-
 - Create prod version of settings file
-
-- Create a provision_always.sh script
+    - debug False (see link below)
 
 - Get a Heroku hobby account and push to that
 
 - Hook up domain name with Heroku app
+
+https://djangogirls.gitbooks.io/django-girls-tutorial-extensions/content/heroku/
