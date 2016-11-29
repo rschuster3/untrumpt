@@ -4,3 +4,5 @@
     - about/contact page
     - twitter feed
     - RSS feed 
+
+- favicon: http://webmasters.stackexchange.com/questions/25876/how-do-i-deploy-a-favicon-on-heroku
