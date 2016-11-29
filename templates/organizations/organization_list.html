@@ -13,17 +13,17 @@
 
     {# filters #}
     <div class="row categories">
-        <span class="category" data-category="all">All the Things</span>
+        <div class="col-md-8 col-md-offset-2">
+            <span class="category" data-category="all">All the Things</span>
+        </div>
     </div>
-    {% for category in categories %}
-        {% if forloop.counter0|divisibleby:4 %}
-            <div class="row categories">
-        {% endif %}
-            <span class="category" data-category="{{ category.0 }}">{{ category.1 }}</span>
-        {% if forloop.counter0|add:-3|divisibleby:4 %}
-            </div>
-        {% endif %}
-    {% endfor %}
+    <div class="row categories">
+        <div class="col-md-8 col-md-offset-2">
+            {% for category in categories %}
+                <span class="category" data-category="{{ category.0 }}">{{ category.1 }}</span>
+            {% endfor %}
+        </div>
+    </div>
 
     <br />
     <br />

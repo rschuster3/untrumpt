@@ -7,22 +7,24 @@
 {% block body_background %}style="background-image:url('{% static 'img/front_page.jpg' %}');"{% endblock body_background %}
 
 {% block jumbotron %}
-    <div class="row front-page-panel">
-        <div class="col-md-10 col-md-offset-1">
-            <h1>You Can Fight Back Against a Trump Presidency</h1>
-        </div>
-        <div class="col-md-10 col-md-offset-1">
-            <button type="button" class="btn btn-secondary">
-                <a href="{% url 'organization_list' %}">Get Involved >></a>
-            </button>
-{% comment %}
-            <button type="button" class="btn btn-secondary">
-                <a href="#">Stay Informed >></a>
-            </button>
-            <button type="button" class="btn btn-secondary">
-                <a href="#">Pay Attention >></a>
-            </button>
-{% endcomment %}
+    <div class="container">
+        <div class="row front-page-panel">
+            <div class="col-md-12">
+                <h1><span class="highlight">You Can Fight Back Against a Trump Presidency</span></h1>
+            </div>
+            <div class="col-md-12">
+                <button type="button" class="btn btn-secondary">
+                    <a href="{% url 'organization_list' %}">Get Involved >></a>
+                </button>
+    {% comment %}
+                <button type="button" class="btn btn-secondary">
+                    <a href="#">Stay Informed >></a>
+                </button>
+                <button type="button" class="btn btn-secondary">
+                    <a href="#">Pay Attention >></a>
+                </button>
+    {% endcomment %}
+            </div>
         </div>
     </div>
 {% endblock jumbotron %}

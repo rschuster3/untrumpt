@@ -46,21 +46,22 @@ body {
     font-family: "Catamaran", sans-serif;
     color: #333333;
     height: 100vh;
-    padding-top: 25vh;
+    padding-top: 30vh;
     margin-top: -50px;
 }
 
 .front-page-panel h1 {
-    font-size: 500%;
+    font-size: 11vh;
     margin-top: -10px; 
     margin-bottom: 50px;
 }
 .highlight {
     background-color: rgba(255,255,255,0.85);
+    line-height: 1.4 !important;
 }
 
 .front-page-panel button {
-    border-radius: 10px;
+    border-radius: 0;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
@@ -69,9 +70,10 @@ body {
 .front-page-panel a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 300%;
+    font-size: 7vh;
 }
 
+@media 
 
 /* organizations app */
 .organization-row {
@@ -102,6 +104,7 @@ body {
     margin-right: 10px;
     font-size: 130%;
     padding: 3px;
+    line-height: 6vh;
     cursor: pointer;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Chrome/Safari/Opera */
