@@ -3,6 +3,7 @@ body {
     background-color: #e6e6e6;
     overflow-x: hidden;
     background-size: cover;
+    font-size: 100%;
 }
 
 .navbar {
@@ -35,7 +36,6 @@ body {
     color: #333333 !important;
     text-align: center;
     font-family: "Open Sans", sans-serif;
-    font-size: 150%;
 }
 .title hr {
     width: 100px;
@@ -51,7 +51,6 @@ body {
 }
 
 .front-page-panel h1 {
-    font-size: 11vh;
     margin-top: -10px; 
     margin-bottom: 50px;
 }
@@ -67,9 +66,7 @@ body {
 .front-page-panel button span {
     color: #ffffff;
     text-decoration: none;
-    font-size: 7vh;
 }
-
 
 /* organizations app */
 .organization-row {
@@ -96,11 +93,11 @@ body {
 .category {
     background-color: #cccccc;
     font-family: "Open Sans", sans-serif;
+    white-space: nowrap;
     border-radius: 2px;
     margin-right: 10px;
-    font-size: 130%;
     padding: 3px;
-    line-height: 6vh;
+    line-height: 2.2;
     cursor: pointer;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Chrome/Safari/Opera */
@@ -117,4 +114,62 @@ body {
 .active {
     background-color: #333333 !important;
     color: #ffffff !important;
+}
+
+/* Media queries so we can have dynamic stuff */
+@media screen and (min-width: 50em) {
+    .navbar a {
+        font-size: 1.4em;
+    }
+    .front-page-panel h1 {
+        font-size: 7em;
+    }
+    .front-page-panel button span {
+        font-size: 3em;
+    }
+    .title p {
+        font-size: 2em;
+    }
+    .title h1 {
+        font-size: 3.8em;
+    }
+    .category {
+        font-size: 1.8em;
+    }
+    .organization-inner {
+        font-size: 1.4em;
+    }
+}
+@media screen and (max-width: 50em) {
+    .navbar a {
+        font-size: 2.0em;
+    }
+    .front-page-panel {
+        padding-top: 15vh;
+    }
+    .front-page-panel h1 {
+        font-size: 5.7em;
+    }
+    .front-page-panel button {
+        margin-bottom: 5vh;
+    }
+    .front-page-panel button span {
+        font-size: 2.5em;
+    }
+    .title p {
+        font-size: 2em;
+    }
+    .title h1 {
+        font-size: 4.0em;
+    }
+    .category {
+        font-size: 2.0em;
+        line-height: 2.0;
+    }
+    .organization-inner {
+        font-size: 1.8em;
+    }
+    .organization-outer {
+        height: auto;
+    }
 }
