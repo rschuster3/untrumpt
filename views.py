@@ -7,3 +7,7 @@ def index(request):
 
 def twitter_feed(request):
     return render(request, 'twitter_feed.html')
+
+
+def about(request):
+    return render(request, 'about.html')

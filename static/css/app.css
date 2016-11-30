@@ -131,6 +131,9 @@ body {
     .navbar a {
         font-size: 1.4em;
     }
+    .main-content p {
+        font-size: 2.2em;
+    }
     .front-page-panel h1 {
         font-size: 7em;
     }
@@ -156,6 +159,9 @@ body {
     }
     .navbar a {
         font-size: 2.0em;
+    }
+    .main-content p {
+        font-size: 2.2em;
     }
     .front-page-panel {
         padding-top: 15vh;
