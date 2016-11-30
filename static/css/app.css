@@ -70,6 +70,7 @@ body {
     border-radius: 0;
     background-color: #00a79d;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 .front-page-panel button span {
     color: #ffffff;
@@ -150,17 +151,18 @@ body {
     }
 }
 @media screen and (max-width: 50em) {
+    body {
+        height: 110vh;
+    }
     .navbar a {
         font-size: 2.0em;
     }
     .front-page-panel {
         padding-top: 15vh;
+        padding-bottom: 5vh;
     }
     .front-page-panel h1 {
         font-size: 5.7em;
-    }
-    .front-page-panel button {
-        margin-bottom: 5vh;
     }
     .front-page-panel button span {
         font-size: 2.5em;

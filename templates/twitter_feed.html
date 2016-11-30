@@ -1,0 +1,18 @@
+{% extends 'website_base.html' %}
+
+{% block main_content %}
+    <div class="row title">
+        <div class="col-md-12">
+            <h1>What's Happening Right Now?</h1>
+            <p>Check the list below to see what national organizations are talking about</p>
+            <hr>
+        </div>
+    </div>
+
+    <div class="iframe-wrapper">
+        <a class="twitter-timeline" data-width="800" data-height="2000" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/untrumpt/lists/pay-attention">
+            A Twitter List by untrumpt
+        </a>
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+{% endblock main_content %}
