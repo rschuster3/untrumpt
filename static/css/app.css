@@ -27,6 +27,13 @@ body {
 .main-content p {
     font-family: "Open Sans", sans-serif;
 }
+.iframe-wrapper  {
+    text-align: center;
+    width: 100%;
+}
+.iframe-wrapper iframe {
+    display: inline-block;
+}
 
 .title h1 {
     color: #333333 !important;
@@ -62,11 +69,13 @@ body {
 .front-page-panel button {
     border-radius: 0;
     background-color: #00a79d;
+    margin-right: 10px;
 }
 .front-page-panel button span {
     color: #ffffff;
     text-decoration: none;
 }
+
 
 /* organizations app */
 .organization-row {

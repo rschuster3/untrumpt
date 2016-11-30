@@ -23,5 +23,6 @@ from organizations import views as organizations_views
 urlpatterns = [
     url(r'^$', base_views.index, name='home'),
     url(r'^organizations/$', organizations_views.organization_list, name='organization_list'),
+    url(r'^twitter-feed/$', base_views.twitter_feed, name='twitter_feed'),
     url(r'^admin/', admin.site.urls),
 ]
