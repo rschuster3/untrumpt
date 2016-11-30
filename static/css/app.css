@@ -149,8 +149,17 @@ body {
     .category {
         font-size: 1.8em;
     }
-    .organization-inner {
+    .organization-inner h3 {
         font-size: 1.4em;
+    }
+    .organization-inner p {
+        font-size: 1.5em;
+    }
+    .organization-inner a {
+        font-size: 1.4em;
+    }
+    .organization-row {
+        height: 300px;
     }
 }
 @media screen and (max-width: 50em) {
@@ -183,10 +192,16 @@ body {
         font-size: 2.0em;
         line-height: 2.0;
     }
-    .organization-inner {
-        font-size: 1.8em;
+    .organization-inner h3 {
+        font-size: 1.5em;
     }
-    .organization-outer {
+    .organization-inner p {
+        font-size: 1.6em;
+    }
+    .organization-inner a {
+        font-size: 1.5em;
+    }
+    .organization-row {
         height: auto;
     }
 }
