@@ -16,7 +16,6 @@ Including another URLconf
 from django.conf.urls import url
 from django.conf import settings
 from django.contrib import admin
-from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
 
 import views as base_views
 from organizations import views as organizations_views
@@ -31,6 +30,3 @@ urlpatterns = [
     url(r'^twitter-feed/$', base_views.twitter_feed, name='twitter_feed'),
     url(r'^admin/', admin.site.urls),
 ]
-
-urlpatterns += staticfiles_urlpatterns()
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
