@@ -79,6 +79,23 @@ body {
     text-decoration: none;
 }
 
+.feed-item {
+    margin-bottom: 40px;
+}
+.feed-favicon {
+    height: 20px; 
+}
+.feed-name,
+.feed-item-date {
+    font-size: 1.4em;
+}
+.feed-item-title {
+    font-size: 2.8em;
+}
+.feed-item-summary {
+    margin-top:10px;
+    font-size: 1.7em !important;
+}
 
 /* organizations app */
 .organization-row {
