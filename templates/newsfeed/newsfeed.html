@@ -1,0 +1,32 @@
+{% extends 'website_base.html' %}
+
+{% load cache %}
+{% load static %}
+
+{% block head_title %}News Feed{% endblock head_title %}
+
+{% block main_content %}
+    <div class="row title">
+        <div class="col-md-12">
+            <h1>Keep up-to-date with the latest news!</h1>
+            <p>Browse the feed below to see what's happening around the world</p>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            {% for item in feed_items %}
+                <div class="feed-item">
+                    <h3 class="feed-item-title">
+                        <a href="{{ item.url }}" target="_blank">{{ item.title }}</a>
+                    </h3>
+                    <img class="feed-favicon" src="http://{{ request.META.HTTP_HOST }}{{ item.feed.favicon.url }}">
+                    <span class="feed-name">&nbsp;{{ item.feed.name }}</span>
+                    <span class="feed-item-date"> - {{ item.pub_date }}</span>
+                    <p class="feed-item-summary">{{ item.summary }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock main_content %}
