@@ -13,8 +13,9 @@ class Feed(models.Model):
         max_length=250,
         help_text="URL of the RSS feed"
     )
-    favicon = models.ImageField(
-        upload_to='feed/favicons/'
+    favicon = models.CharField(
+        max_length=50,
+        help_text="File name of favicon we're using; located in static/img/feed/favicons/"
     )
 
     class Meta:
