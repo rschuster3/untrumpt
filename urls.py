@@ -14,16 +14,23 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
+from django.conf import settings
 from django.contrib import admin
+from django.contrib.staticfiles.urls import static, staticfiles_urlpatterns
 
 import views as base_views
 from organizations import views as organizations_views
+from newsfeed import views as newsfeed_views
 
 
 urlpatterns = [
     url(r'^$', base_views.index, name='home'),
     url(r'^about/$', base_views.about, name='about'),
     url(r'^organizations/$', organizations_views.organization_list, name='organization_list'),
+    url(r'^newsfeed/$', newsfeed_views.newsfeed, name='newsfeed'),
     url(r'^twitter-feed/$', base_views.twitter_feed, name='twitter_feed'),
     url(r'^admin/', admin.site.urls),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

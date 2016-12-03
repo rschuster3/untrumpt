@@ -1,7 +1,9 @@
 - Can always hunt down and add more organizations!
 
 - Map out site
-    - about/contact page
     - RSS feed 
 
-- favicon: http://webmasters.stackexchange.com/questions/25876/how-do-i-deploy-a-favicon-on-heroku
+Harder Fixes
+- Carry theme through from front page to other pages
+- Charity rating for each org
+- Better UI for org filtering - Ask if other people have this problem before you put lots of time into it.

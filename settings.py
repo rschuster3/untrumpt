@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'multiselectfield',
 
     'organizations',
+    'newsfeed',
 ]
 
 MIDDLEWARE = [
@@ -64,7 +65,8 @@ TEMPLATES = [
     },
 ]
 
-MEDIA_ROOT = BASE_DIR + '/user_media/'
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, '/user_media/')
+MEDIA_URL = '/user_media/'
 
 WSGI_APPLICATION = 'wsgi.application'
 
@@ -106,6 +108,7 @@ STATICFILES_DIRS = (
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 ALLOWED_HOSTS = ['*']
