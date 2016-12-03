@@ -66,9 +66,6 @@ TEMPLATES = [
     },
 ]
 
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, '/user_media/')
-MEDIA_URL = '/user_media/'
-
 WSGI_APPLICATION = 'wsgi.application'
 
 # Password validation
