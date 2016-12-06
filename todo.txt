@@ -1,7 +1,6 @@
 - Can always hunt down and add more organizations!
 
-- Map out site
-    - RSS feed 
+- UTC vs EST dates on newsfeed
 
 Harder Fixes
 - Carry theme through from front page to other pages

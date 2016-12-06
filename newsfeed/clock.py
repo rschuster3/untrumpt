@@ -5,7 +5,7 @@ import datetime
 
 from django.utils.html import strip_tags
 from apscheduler.schedulers.blocking import BlockingScheduler
-# from apscheduler.triggers.date import DateTrigger
+from apscheduler.triggers.date import DateTrigger
 
 from newsfeed.models import Feed, FeedItem
 
@@ -40,6 +40,6 @@ def remove_old_feed_items():
             item.delete()
 
 
-# sched.add_job(func=update_newsfeed,
-#              trigger=DateTrigger(run_date=datetime.datetime.now()))
+sched.add_job(func=update_newsfeed,
+              trigger=DateTrigger(run_date=datetime.datetime.now()))
 sched.start()
