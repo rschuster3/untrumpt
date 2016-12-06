@@ -41,5 +41,5 @@ def remove_old_feed_items():
 
 
 # sched.add_job(func=update_newsfeed,
-#               trigger=DateTrigger(run_date=datetime.datetime.now()))
+#              trigger=DateTrigger(run_date=datetime.datetime.now()))
 sched.start()

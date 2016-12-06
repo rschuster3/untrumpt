@@ -25,7 +25,7 @@
                         <img class="feed-favicon" src="{% static favicon_image %}">
                     {% endwith %}
                     <span class="feed-name">&nbsp;{{ item.feed.name }}</span>
-                    <span class="feed-item-date"> - {{ item.pub_date|date:"d N Y, H:i"|add:" EST" }}</span>
+                    <span class="feed-item-date"> - {{ item.pub_date|date:"d N Y, H:i"|add:" UTC" }}</span>
                     <p class="feed-item-summary">{{ item.summary }}</p>
                 </div>
             {% endfor %}
