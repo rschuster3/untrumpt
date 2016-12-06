@@ -1,2 +1,2 @@
 web: gunicorn wsgi 
-newsfeedclock: python newsfeed/clock.py
+newsfeedclock: python manage.py shell < newsfeed/clock.py
