@@ -33,28 +33,28 @@
             <div class="col-md-4 organization-outer" data-categories="{{ organization.categories }}">
                 <div class="organization-inner">
                     <h3>
-                        <a href="{{ organization.website }}" target="_blank">{{ organization.name }}</a>
+                        <a class="organization-inner-header" href="{{ organization.website }}" target="_blank">{{ organization.name }}</a>
                     </h3>
                     {% if organization.description %}
                         <p>{{ organization.description|truncatechars:250 }}</p>
                     {% endif %}
         
                     {% if organization.donate_url %}
-                        <a href="{{ organization.donate_url }}">Donate</a>
+                        <a class="organization-inner-link" href="{{ organization.donate_url }}">Donate</a>
                     {% endif %}
         
                     {% if organization.involvement_url %}
-                        | <a href="{{ organization.involvement_url }}">Get Involved</a>
+                        | <a class="organization-inner-link" href="{{ organization.involvement_url }}">Get Involved</a>
                     {% endif %}
         
                     {% if organization.facebook_url %}
-                        | <a href="{{ organization.facebook_url }}">
+                        | <a class="organization-inner-link" href="{{ organization.facebook_url }}">
                             <i class="fa fa-facebook" aria-hidden="true"></i>
                         </a>
                     {% endif %}
         
                     {% if organization.twitter_handle %}
-                        | <a href="http://www.twitter.com/{{ organization.twitter_handle }}">
+                        | <a class="organization-inner-link" href="http://www.twitter.com/{{ organization.twitter_handle }}">
                             <i class="fa fa-twitter" aria-hidden="true"></i>
                         </a>
                     {% endif %}

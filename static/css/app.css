@@ -166,13 +166,13 @@ body {
     .category {
         font-size: 1.8em;
     }
-    .organization-inner h3 {
+    .organization-inner-header {
         font-size: 1.4em;
     }
     .organization-inner p {
         font-size: 1.5em;
     }
-    .organization-inner a {
+    .organization-inner-link {
         font-size: 1.4em;
     }
     .organization-row {
@@ -204,10 +204,10 @@ body {
     .organization-inner {
         font-size: 0.65em;
     }
-    .organization-inner h3 a {
+    .organization-inner-header {
         font-size: 1.0em;
     }
-    .organization-inner a {
+    .organization-inner-link {
         font-size: 2.2em;
     }
 }
@@ -241,13 +241,13 @@ body {
         font-size: 2.0em;
         line-height: 2.0;
     }
-    .organization-inner h3 {
+    .organization-inner-header {
         font-size: 1.5em;
     }
     .organization-inner p {
         font-size: 1.6em;
     }
-    .organization-inner a {
+    .organization-inner-link {
         font-size: 1.5em;
     }
     .organization-row {
