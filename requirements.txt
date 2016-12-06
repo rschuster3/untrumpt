@@ -12,6 +12,7 @@ colorama==0.2.5
 configobj==4.7.2
 dj-database-url==0.4.1
 django-multiselectfield==0.1.4
+feedparser==5.2.1
 gunicorn==19.6.0
 html5lib==0.999
 httplib2==0.8

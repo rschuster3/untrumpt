@@ -21,7 +21,9 @@
                     <h3 class="feed-item-title">
                         <a href="{{ item.url }}" target="_blank">{{ item.title }}</a>
                     </h3>
-                    <img class="feed-favicon" src="{% static 'img/feed/favicons/{{ item.feed.favicon }}' %}">
+                    {% with 'img/feed/favicons/'|add:item.feed.favicon as favicon_image %}
+                        <img class="feed-favicon" src="{% static favicon_image %}">
+                    {% endwith %}
                     <span class="feed-name">&nbsp;{{ item.feed.name }}</span>
                     <span class="feed-item-date"> - {{ item.pub_date }}</span>
                     <p class="feed-item-summary">{{ item.summary }}</p>
