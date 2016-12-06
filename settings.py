@@ -132,4 +132,4 @@ DATABASES['default'].update(db_from_env)
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # This can be overridden in app.env 
-DEBUG=os.environ.get('DEBUG')
+DEBUG = os.environ.get('DEBUG')

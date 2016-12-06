@@ -30,3 +30,8 @@ urlpatterns = [
     url(r'^twitter-feed/$', base_views.twitter_feed, name='twitter_feed'),
     url(r'^admin/', admin.site.urls),
 ]
+
+if not settings.DEBUG:
+    urlpatterns += patterns('',
+        (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+    )
