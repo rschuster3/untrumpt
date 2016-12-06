@@ -3,6 +3,7 @@ import pytz
 from time import mktime
 import datetime
 
+from django.utils.html import strip_tags
 from apscheduler.schedulers.blocking import BlockingScheduler
 # from apscheduler.triggers.date import DateTrigger
 
@@ -27,7 +28,7 @@ def update_newsfeed():
                     feed=feed,
                     title=entry.title.encode('ascii','ignore'),
                     url=entry.link,
-                    summary=entry.summary.encode('ascii','ignore'),
+                    summary=strip_tags(entry.summary.encode('ascii','ignore')),
                     pub_date=pub_eastern
                 )
 
