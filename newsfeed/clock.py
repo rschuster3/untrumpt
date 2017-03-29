@@ -33,13 +33,17 @@ def update_newsfeed():
                 )
 
 
-@sched.scheduled_job('interval', days=3)
+@sched.scheduled_job('interval', days=1)
 def remove_old_feed_items():
     for item in FeedItem.objects.all():
-        if item.pub_date < (datetime.datetime.now() - datetime.timedelta(days=3)):
+        if item.pub_date < (datetime.datetime.now() - datetime.timedelta(days=1)):
             item.delete()
 
 
+# Run jobs immediately on deploy
 sched.add_job(func=update_newsfeed,
               trigger=DateTrigger(run_date=datetime.datetime.now()))
+sched.add_job(func=remove_old_feed_items,
+              trigger=DateTrigger(run_date=datetime.datetime.now()))
+
 sched.start()
