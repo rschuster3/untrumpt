@@ -2,3 +2,4 @@ app.env
 *.pyc
 .vagrant/
 staticfiles/*
+*.swp
