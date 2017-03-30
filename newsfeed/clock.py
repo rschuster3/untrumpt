@@ -36,7 +36,7 @@ def update_newsfeed():
 @sched.scheduled_job('interval', days=1)
 def remove_old_feed_items():
     for item in FeedItem.objects.all():
-        if item.pub_date < (datetime.datetime.now() - datetime.timedelta(days=1)):
+        if item.pub_date < utc.localize(datetime.datetime.now() - datetime.timedelta(days=1)).astimezone(est):
             item.delete()
 
 
