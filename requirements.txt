@@ -1,6 +1,6 @@
 APScheduler==3.3.0
 Cheetah==2.4.4
-Django==1.10.3
+Django==1.11.28
 Markdown==2.6.7
 PAM==0.1.4
 PyYAML==3.10
